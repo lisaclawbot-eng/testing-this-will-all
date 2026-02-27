@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Most Common JS Errors</title>
+</head>
+<body>
+  <h1>Most Common JavaScript Errors</h1>
+
+  <h2>1. Syntax Errors</h2>
+  <p>Syntax errors occur when the code violates the grammatical rules of JavaScript.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>function test() {
+ console.log ('hello') // Missing closing quote and bracket
+  }</code></pre>
+  <p><strong>How to fix:</strong> Double-check punctuation, brackets, and spelling.</p>
+
+  <h2>2. Reference Errors</h2>
+  <p>A ReferenceError occurs when you try to use a variable that hasn't been declared.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>console.log(myVariable); // myVariable is not defined</code></pre>
+  <p><strong>How to fix:</strong> Declare variables before using them (using var, let, or const).</p>
+
+  <h2>3. Type Errors</h2>
+  <p>A TypeError arises when an operation is performed on an incompatible data type.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>null.property; // Cannot read properties of null (reading 'property')</code></pre>
+  <p><strong>How to fix:</strong> Ensure correct data types; check for null or undefined values before accessing properties.</p>
+
+  <h2>4. Undefined and Null Errors</h2>
+  <p>These occur when trying to access properties on variables that are null or undefined.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>let obj;
+console.log(obj.name); // Cannot read properties of undefined (reading 'name')</code></pre>
+  <p><strong>How to fix:</strong> Initialize variables properly and check for null or undefined values.</p>
+
+  <h2>5. Incorrect Use of "this"</h2>
+  <p>The value of <code>this</code> depends on how a function is called.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>const myObj = {
+  myMethod: function() {
+    console.log(this); // In this context, 'this' refers to myObj
+  }
+};
+myObj.myMethod();</code></pre>
+  <p><strong>How to fix:</strong> Understand <code>this</code> context and use arrow functions to maintain lexical <code>this</code>.</p>
+
+  <h2>6. Asynchronous Code Confusion</h2>
+  <p>Errors related to callbacks, Promises, and async/await.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>setTimeout(() => {
+  console.log('Delayed message');
+}, 1000); // Incorrect or missing callback handling</code></pre>
+  <p><strong>How to fix:</strong> Use Promises and async/await for better control of asynchronous code.</p>
+
+  <h2>7. Logical Errors</h2>
+  <p>Errors in your code's logic that do not produce errors but lead to incorrect results.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>function add(a, b) {
+  return a - b; // Incorrect operator
+}</code></pre>
+  <p><strong>How to fix:</strong> Test the code thoroughly with different inputs and use the debugger to track variable values.</p>
+
+  <h2>8. Comparison Operator Confusion</h2>
+  <p>Using the wrong comparison operator.</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>if (x = 5) { // Should be x == 5 or x === 5
+  console.log("This will always execute");
+}</code></pre>
+  <p><strong>How to fix:</strong> Always use strict equality (===) for comparisons.</p>
+
+  <h2>9. DOM Manipulation Errors</h2>
+  <p>Errors related to manipulating the Document Object Model (DOM).</p>
+  <p><strong>Example:</strong></p>
+  <pre><code>document.getElementById('nonExistentId').innerHTML = 'New Content'; // Element with id 'nonExistentId' not found</code></pre>
+  <p><strong>How to fix:</strong> Ensure the DOM element exists before attempting to manipulate it.</p>
+
+</body>
+</html>
